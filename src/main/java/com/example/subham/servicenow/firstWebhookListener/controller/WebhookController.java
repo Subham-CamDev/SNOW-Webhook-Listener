@@ -20,27 +20,6 @@ public class WebhookController {
         this.service = service;
     }
 
-//    @PostMapping("/webhook/incident")
-//    public ResponseEntity<?> getSnowIncidentDetails(@RequestBody IncidentPayload payload)
-//    {
-//        service.handleIncidentWebhook(payload);
-//        return ResponseEntity.ok("INCIDENT Webhook received and processed");
-//    }
-
-//    @PostMapping("/webhook/items")
-//    public ResponseEntity<?> getSnowRequestedItemDetails(@RequestBody RequestedItemWebhookPayload payload)
-//    {
-//        service.handleRequestedItemWebhook(payload);
-//        return ResponseEntity.ok("REQUESTED ITEMS Webhook received and processed");
-//    }
-
-//    @PostMapping("/webhook/serviceRequest")
-//    public ResponseEntity<?> getSnowRequestDetails(@RequestBody RequestWebhookPayload payload)
-//    {
-//        service.handleRequestWebhook(payload);
-//        return ResponseEntity.ok("REQUEST Webhook received and processed");
-//    }
-
     @PostMapping("/webhook")
     public ResponseEntity<?> getSnowIncidentWebhook(@RequestBody WebhookPayload payload)
     {
